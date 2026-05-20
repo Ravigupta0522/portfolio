@@ -33,7 +33,7 @@ export default function Hero({ scrollTo }) {
   const name = "Ravishankar Gupta".split("");
 
   return (
-    <section ref={containerRef} id="home" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "0 5%", position: "relative", overflow: "hidden" }}>
+    <section ref={containerRef} id="home" className="hero-section" style={{ minHeight: "100vh", display: "flex", alignItems: "center", padding: "0 5%", position: "relative", overflow: "hidden" }}>
       {/* Background Blobs — parallax */}
       <motion.div className="floating-blob" style={{ width: 500, height: 500, background: "#FF6B6B", top: "10%", left: "-10%", y }} />
       <motion.div className="floating-blob" style={{ width: 400, height: 400, background: "#4ECDC4", bottom: "5%", right: "-5%", y: useTransform(scrollYProgress, [0, 1], [0, -80]) }} />
@@ -44,7 +44,7 @@ export default function Hero({ scrollTo }) {
       >
         <motion.div
           className="hero-grid"
-          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 60, alignItems: "center" }}
+          style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 48, alignItems: "center" }}
           variants={containerVariants}
           initial="hidden"
           animate="visible"
@@ -63,7 +63,7 @@ export default function Hero({ scrollTo }) {
 
             {/* Hi I'm */}
             <motion.div variants={itemVariants}>
-              <h1 style={{ fontSize: "3.8rem", fontWeight: 800, lineHeight: 1.1, marginBottom: 12, textAlign: "center" }}>
+              <h1 className="hero-h1" style={{ fontSize: "3.8rem", fontWeight: 800, lineHeight: 1.1, marginBottom: 12, textAlign: "center" }}>
                 <span style={{ color: "white" }}>Hi, I'm</span><br />
                 {/* GSAP char animation */}
                 <span ref={titleRef} style={{ display: "inline-block", perspective: "600px" }}>
