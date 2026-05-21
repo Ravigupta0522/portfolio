@@ -111,7 +111,6 @@ export default function Contact() {
 
       setSent(true);
       setFormData({ name: "", email: "", subject: "", msg: "" });
-      setTimeout(() => setSent(false), 5000);
     } catch (err) {
       console.error("Send error:", err);
       setError("Kuch galat ho gaya. Dobara try karo!");
@@ -227,10 +226,24 @@ export default function Contact() {
                     <h3 style={{ fontFamily: "'Courier New', monospace", fontSize: 22, color: "#4ECDC4" }}>
                       Message Sent!
                     </h3>
-                    <p style={{ color: "rgba(255,255,255,0.45)", marginTop: 10, fontFamily: "monospace" }}>
+                    <p style={{ color: "rgba(255,255,255,0.45)", marginTop: 10, fontFamily: "monospace", marginBottom: 28 }}>
                       Message Firebase mein save ho gaya ✅<br />
                       Jaldi reply karunga! 🚀
                     </p>
+                    <motion.button
+                      onClick={() => setSent(false)}
+                      whileHover={{ scale: 1.05, boxShadow: "0 12px 32px rgba(78,205,196,0.4)" }}
+                      whileTap={{ scale: 0.97 }}
+                      transition={{ type: "spring", stiffness: 380, damping: 15 }}
+                      style={{
+                        padding: "12px 28px", borderRadius: 50, border: "1px solid rgba(78,205,196,0.4)",
+                        cursor: "pointer", background: "rgba(78,205,196,0.1)",
+                        color: "#4ECDC4", fontFamily: "'Courier New', monospace",
+                        fontSize: 12, letterSpacing: 1.5, textTransform: "uppercase", fontWeight: 700,
+                      }}
+                    >
+                      ← Send Another Message
+                    </motion.button>
                   </motion.div>
                 ) : (
                   <motion.div key="form" style={{ display: "flex", flexDirection: "column", gap: 18 }}>

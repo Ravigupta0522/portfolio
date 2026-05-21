@@ -242,15 +242,106 @@ a, button, [role="button"], .nav-item, .project-card, .glow-btn {
   .name-email-grid { grid-template-columns: 1fr !important; }
   .skills-grid { grid-template-columns: 1fr !important; }
   .exp-grid { grid-template-columns: 1fr !important; }
+
+  /* Skills two-column → single */
+  .skills-content-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* About contact info cards: 2 cols on tablet */
+  .about-info-grid {
+    grid-template-columns: 1fr 1fr !important;
+  }
 }
 
 @media (max-width: 600px) {
+  /* --- Global --- */
   .glow-btn { padding: 12px 24px !important; font-size: 12px !important; }
-  .hero-h1 { font-size: 2rem !important; }
-  .ticker-item { font-size: 10px; padding: 0 20px; }
-  .section-heading { font-size: 2rem !important; }
-  .contact-section { padding: 60px 4% !important; }
+  .section-heading { font-size: 1.9rem !important; }
+
+  /* --- Hero --- */
   .hero-section { padding: 0 4% !important; }
+  .hero-h1 { font-size: 2rem !important; }
+  .hero-grid { padding-top: 80px; }
+
+  /* --- About --- */
   .about-section { padding: 60px 4% !important; }
+  #about { padding: 60px 4% !important; }
+  #about .about-grid { gap: 28px !important; }
+  #about > div > div:last-child > div {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
   .info-card-val { font-size: 11px !important; }
+
+  /* --- Skills --- */
+  #skills { padding: 60px 4% !important; }
+  .skills-content-grid {
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
+  }
+  #skills .skill-proficiency-card {
+    padding: 20px 18px !important;
+  }
+
+  /* --- Projects --- */
+  #projects { padding: 60px 4% !important; }
+  .projects-grid { grid-template-columns: 1fr !important; gap: 16px !important; }
+
+  /* --- Experience --- */
+  #experience { padding: 60px 4% !important; }
+  #experience .exp-card { padding: 14px 16px !important; }
+
+  /* --- Contact --- */
+  .contact-section { padding: 60px 4% !important; }
+  .contact-form-inner { padding: 20px 16px !important; }
+  .name-email-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .contact-grid { gap: 20px !important; }
+
+  /* --- Ticker --- */
+  .ticker-item { font-size: 10px; padding: 0 20px; }
+
+  /* --- Footer --- */
+  footer { padding: 30px 4% !important; }
+  footer > div { flex-direction: column !important; gap: 12px !important; text-align: center !important; }
+
+  /* --- Project Modal --- */
+  #projects-modal-inner { padding: 24px 16px !important; }
+}
+
+@media (max-width: 480px) {
+  /* --- Hero --- */
+  .hero-h1 { font-size: 1.7rem !important; }
+  .hero-btns { flex-direction: column !important; align-items: stretch !important; gap: 12px !important; }
+  .hero-btns .glow-btn { text-align: center !important; }
+
+  /* --- About --- */
+  #about > div > div:first-child {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* --- About action buttons --- */
+  .about-actions { flex-direction: column !important; gap: 10px !important; }
+  .about-actions .glow-btn { text-align: center !important; width: 100% !important; }
+
+  /* --- Skills filter tabs --- */
+  #skills .filter-tabs { gap: 6px !important; }
+  #skills .filter-tabs button { padding: 6px 14px !important; font-size: 11px !important; }
+
+  /* --- Contact info cards (stacked) --- */
+  .contact-grid > div:first-child { gap: 8px !important; }
+
+  /* --- Experience card --- */
+  #experience .exp-gap { gap: 16px !important; }
+  #experience .exp-dot-col { display: none !important; }
+
+  /* --- Navbar height --- */
+  nav > div > div { height: 56px !important; }
+
+  /* --- Section headings --- */
+  .section-heading, h2 { font-size: 1.7rem !important; }
+
+  /* --- Project modal on small phone --- */
+  #projects-modal-inner { border-radius: 20px !important; padding: 20px 14px !important; }
+  #projects-modal-inner h2 { font-size: 20px !important; }
 }

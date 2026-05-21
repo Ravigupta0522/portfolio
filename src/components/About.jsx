@@ -45,7 +45,7 @@ export default function About({ scrollTo }) {
   const [photoHovered, setPhotoHovered] = useState(false);
 
   return (
-    <section id="about" style={{ padding: "96px 5%", background: "rgba(255,255,255,0.02)" }}>
+    <section id="about" className="about-section" style={{ padding: "96px 5%", background: "rgba(255,255,255,0.02)" }}>
       <div style={{ maxWidth: 1100, margin: "0 auto" }}>
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 60 }}>
@@ -141,7 +141,7 @@ export default function About({ scrollTo }) {
               </p>
 
               {/* Contact Info Cards */}
-              <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 28 }}>
+              <div className="about-info-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, marginBottom: 28 }}>
                 {[
                   { icon: "✉️", label: "EMAIL", val: "ravigupta7275450@gmail.com", color: "#FF6B6B" },
                   { icon: "📍", label: "LOCATION", val: "Lucknow, India", color: "#4ECDC4" },
@@ -214,7 +214,7 @@ export default function About({ scrollTo }) {
                 </div>
               </div>
 
-              <div style={{ display: "flex", gap: 16 }}>
+              <div className="about-actions" style={{ display: "flex", gap: 16, flexWrap: "wrap" }}>
                 <motion.a
                   href="/Ravishankar gupta resume.pdf"
                   download="Ravishankar_Gupta_Resume.pdf"

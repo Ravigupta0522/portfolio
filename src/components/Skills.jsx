@@ -119,7 +119,7 @@ export default function Skills() {
 
         {/* Filter Tabs */}
         <Reveal delay={0.1}>
-          <div style={{ display: "flex", justifyContent: "center", gap: 10, flexWrap: "wrap", marginBottom: 52 }}>
+          <div className="filter-tabs" style={{ display: "flex", justifyContent: "center", gap: 10, flexWrap: "wrap", marginBottom: 52 }}>
             {FILTERS.map((f) => (
               <FilterTab key={f} label={f} active={activeFilter === f} onClick={() => setActiveFilter(f)} />
             ))}
@@ -127,7 +127,7 @@ export default function Skills() {
         </Reveal>
 
         {/* Content Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "start" }}>
+        <div className="skills-content-grid" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 40, alignItems: "start" }}>
 
           {/* Left — Proficiency Bars */}
           <Reveal dir="left">
